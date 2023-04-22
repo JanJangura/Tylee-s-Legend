@@ -11,7 +11,8 @@ public class ArrowShoot : MonoBehaviour
 
 
     public GameObject HandArrow;
-   
+
+    public int damageAmount = 20;
     void shoot()
     {
         HandArrow.gameObject.SetActive(false);
@@ -22,6 +23,12 @@ public class ArrowShoot : MonoBehaviour
         {
             GameObject ArrowInstantiate = GameObject.Instantiate(ArrowPrefab, ArrowSpawnPosition.transform.position, ArrowSpawnPosition.transform.rotation) as GameObject;
             ArrowInstantiate.GetComponent<Arrow>().setTarget(hit.point);
+
+            if (hit.collider.tag == "Nightmare")
+            {
+                
+                hit.collider.GetComponent<Nightmare>().TakeDamage(damageAmount);
+            }
         }
     }
 }

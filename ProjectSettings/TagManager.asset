@@ -8,6 +8,8 @@ TagManager:
   - AI
   - WavePoints
   - AgentManager
+  - WayPoints
+  - Nightmare
   layers:
   - Default
   - TransparentFX
