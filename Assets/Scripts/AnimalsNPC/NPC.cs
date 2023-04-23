@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        if (agent.remainingDistance <= 1 && agent.remainingDistance > 0)
+        if (agent.remainingDistance < 1 && agent.remainingDistance > 0)
         {
             Invoke("MoveAI", 1);
             animator.SetBool("IsWalking", false);
@@ -38,6 +38,7 @@ public class NPC : MonoBehaviour
     {       
         int rand = Random.Range(0, WP.wavePoints.Length);
         agent.SetDestination(WP.wavePoints[rand].position);
+        Debug.Log(rand);
     }
 
     IEnumerator waiter()
