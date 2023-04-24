@@ -13,6 +13,8 @@ public class ArrowShoot : MonoBehaviour
     public GameObject HandArrow;
 
     public int damageAmount = 20;
+
+    
     void shoot()
     {
         HandArrow.gameObject.SetActive(false);
@@ -29,6 +31,9 @@ public class ArrowShoot : MonoBehaviour
                 
                 hit.collider.GetComponent<Nightmare>().TakeDamage(damageAmount);
             }
+
+         
+           
         }
     }
 }

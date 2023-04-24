@@ -10,6 +10,7 @@ TagManager:
   - AgentManager
   - WayPoints
   - Nightmare
+  - Alien
   layers:
   - Default
   - TransparentFX

@@ -350,9 +350,9 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: c7ec62058d54ff043aa271ca2d54e856, type: 3}
+    m_Motion: {fileID: -203655887218126122, guid: d7794c8489bc3b14a9296ee9f5329f29, type: 3}
     m_Threshold: 0
-    m_Position: {x: -0.01, y: 0.01}
+    m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Forward
