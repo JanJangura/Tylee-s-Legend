@@ -11,6 +11,7 @@ TagManager:
   - WayPoints
   - Nightmare
   - Alien
+  - WayPoint
   layers:
   - Default
   - TransparentFX

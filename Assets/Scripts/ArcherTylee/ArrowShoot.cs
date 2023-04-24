@@ -32,8 +32,14 @@ public class ArrowShoot : MonoBehaviour
                 hit.collider.GetComponent<Nightmare>().TakeDamage(damageAmount);
             }
 
-         
-           
+            if (hit.collider.tag == "Nightmare")
+            {
+
+                hit.collider.GetComponent<Nightmare>().TakeDamage(damageAmount);
+            }
+
+
+
         }
     }
 }
