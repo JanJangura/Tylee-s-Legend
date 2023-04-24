@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityTutorial.Manager;
 
 
 namespace UnityTutorial.PlayerControl
@@ -26,14 +28,19 @@ namespace UnityTutorial.PlayerControl
         private const float _runSpeed = 6f;
 
         private Vector2 _currentVelocity;
-            
-        
+
+
+       
+
+
         private void Start()
         {
             _hasAnimator = TryGetComponent<Animator>(out _animator);
             _playerRigidbody = GetComponent<Rigidbody>();
             _inputManager = GetComponent<InputManager>();
 
+            
+           
 
             _xVelHash = Animator.StringToHash("X_Velocity");
             _yVelHash = Animator.StringToHash("Y_Velocity");
@@ -82,8 +89,10 @@ namespace UnityTutorial.PlayerControl
             _xRotation = Mathf.Clamp(_xRotation, UpperLimit, BottomLimit);
 
             Camera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
-            transform.Rotate(transform.up, Mouse_X * MouseSensitivity * Time.deltaTime);
+            transform.Rotate(Vector3.up * Mouse_X * MouseSensitivity * Time.smoothDeltaTime);
         }
+
+        
     }
 }
     

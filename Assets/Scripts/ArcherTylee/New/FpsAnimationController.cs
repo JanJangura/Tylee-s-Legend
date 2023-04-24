@@ -6,8 +6,8 @@ public class FpsAnimationController : MonoBehaviour
 {
     Animator anim;
 
-    int xmove = Animator.StringToHash("xmove");
-    int ymove = Animator.StringToHash("ymove");
+    int xmove = Animator.StringToHash("X_Velocity");
+    int ymove = Animator.StringToHash("Y_Velocity");
 
     private void Awake()
     {
