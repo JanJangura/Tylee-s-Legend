@@ -1818,9 +1818,8 @@ GameObject:
   - component: {fileID: 7982090977910580844}
   - component: {fileID: 4045984677050727446}
   - component: {fileID: 860943255356897046}
-  - component: {fileID: 5686840254227780507}
-  - component: {fileID: 7348218867076305437}
   - component: {fileID: -1680029537114585726}
+  - component: {fileID: 2110595297518376622}
   m_Layer: 0
   m_Name: Bear_4
   m_TagString: AI
@@ -1887,31 +1886,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5686840254227780507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317722503424883926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e67b0b8e711c6a042a6fa3e469b19498, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &7348218867076305437
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7317722503424883926}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.294485, y: 1.2457972, z: 2.3007793}
-  m_Center: {x: 0.0261645, y: 0.6223674, z: 0.017525911}
 --- !u!114 &-1680029537114585726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,10 +1898,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26df4d10d29f7814384be8235d35c97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 3
   animator: {fileID: 4045984677050727446}
   meat: {fileID: 5272547568401719585, guid: e5064c0e46803b64a829ac04aff3f0c0, type: 3}
   damage: 1
+--- !u!136 &2110595297518376622
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7317722503424883926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.1269428
+  m_Height: 3.082557
+  m_Direction: 2
+  m_Center: {x: -0.018613454, y: 0.8530984, z: 0.14592338}
 --- !u!1 &7492185440926017359
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
@@ -17,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
         if (health <= 0)
         {
             player.GetComponent<PlayerMovement>().enabled = false;

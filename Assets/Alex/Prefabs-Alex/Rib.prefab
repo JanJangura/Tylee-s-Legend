@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2988193342056222684}
   m_Layer: 0
   m_Name: Rib
-  m_TagString: Untagged
+  m_TagString: ObjectInteraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

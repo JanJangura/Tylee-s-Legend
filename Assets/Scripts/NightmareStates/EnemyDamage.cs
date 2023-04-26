@@ -6,7 +6,6 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     PlayerHealth player;
-    private float damageRange;
     public float damageSet = 25f;
     public float minDamage;
     public float maxDamage;
@@ -20,7 +19,7 @@ public class EnemyDamage : MonoBehaviour
 
     void Start()
     {
-        damageRange = Random.Range(minDamage, maxDamage);
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
        // source = player.GetComponent<AudioSource>();
@@ -30,14 +29,14 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && randomDamage)
         {
-            player.health -= damageRange;
+            player.health -= Random.Range(minDamage, maxDamage); ;
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }
 
         if (other.gameObject.tag == "Player" && setDamage)
         {
-            player.health -= damageSet;
+            player.health -= Random.Range(minDamage, maxDamage); ;
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }

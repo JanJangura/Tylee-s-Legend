@@ -91,8 +91,6 @@ namespace UnityTutorial.PlayerControl
             Camera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
             transform.Rotate(Vector3.up * Mouse_X * MouseSensitivity * Time.smoothDeltaTime);
         }
-
-        
     }
 }
     

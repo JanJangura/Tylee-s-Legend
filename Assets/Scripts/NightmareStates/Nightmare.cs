@@ -16,13 +16,10 @@ public class Nightmare : MonoBehaviour
         {
             animationPlayDeath();
             GetComponent<Collider>().enabled = false;
-            Debug.Log("Dead");
         }
         else
         {            
             animationDamageTaken();
-            Debug.Log("GUN");
-            Debug.Log(maxHealth);
         }
     }
 

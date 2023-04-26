@@ -13,6 +13,7 @@ TagManager:
   - Alien
   - WayPoint
   - Arrow
+  - ObjectInteraction
   layers:
   - Default
   - TransparentFX
