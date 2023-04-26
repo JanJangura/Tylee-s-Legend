@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -17,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;    // Want to control what this object checks for
 
+    [Header("SpawnPortal")]
+    public GameObject Portal;
+    public int spawnPortal = 3;
+    public int totalPointsNeeded;
+
     Vector3 velocity;
     bool isGrounded;    // bool set default to false
 
@@ -27,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
      void Start()
     {
+        
         animator = GetComponent<Animator>();
         HandArrow.gameObject.SetActive(false);
     }
@@ -86,6 +93,16 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("shoot", false);
+        }
+    }
+
+    public void SpawnPortal(int i)
+    {
+        totalPointsNeeded += 1;
+
+        if (totalPointsNeeded >= spawnPortal)
+        {
+            
         }
     }
 }

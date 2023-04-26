@@ -43,7 +43,6 @@ public class EnemyDamage : MonoBehaviour
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }
-
     }
 
 
