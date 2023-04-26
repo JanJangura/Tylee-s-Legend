@@ -38,7 +38,6 @@ public class PatrolState : StateMachineBehaviour
         {
             agent.SetDestination(WP.wavePoints[rand].position);
         }
-        Debug.Log(agent.SetDestination(WP.wavePoints[rand].position));
             
         timer += Time.deltaTime;
         if (agent.remainingDistance < 1 && agent.remainingDistance > 0)

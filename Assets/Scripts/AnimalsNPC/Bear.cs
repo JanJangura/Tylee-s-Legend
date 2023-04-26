@@ -12,12 +12,18 @@ public class Bear : Nightmare
     public float deathTimer = 5f;
     public float stopRunning = 7f;
 
+    public override void Start()
+    {
+        base.Start();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Arrow")
         {
             GoRun();
             base.TakeDamage(damage);
+            player.isBear = true;
         }
     }
 

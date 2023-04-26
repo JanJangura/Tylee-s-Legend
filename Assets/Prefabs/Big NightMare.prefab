@@ -75,9 +75,7 @@ GameObject:
   - component: {fileID: 1480361604507703464}
   - component: {fileID: 1480361604500012642}
   - component: {fileID: 1480361604523982451}
-  - component: {fileID: 1480361604523982449}
   - component: {fileID: 1480361604523982448}
-  - component: {fileID: 1480361604523982452}
   m_Layer: 0
   m_Name: Big NightMare
   m_TagString: Nightmare
@@ -135,20 +133,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6039925, y: 4.1671343, z: 8.283247}
   m_Center: {x: 0, y: 2, z: -0.25996113}
---- !u!114 &1480361604523982449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480361604507341262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b9900ad3697ec942a6a4ddc0f5b72f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  animator: {fileID: 1480361604500012642}
 --- !u!195 &1480361604523982448
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -171,23 +155,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1480361604523982452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480361604507341262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageSet: 100
-  minDamage: 1
-  maxDamage: 2
-  randomDamage: 0
-  setDamage: 1
 --- !u!1 &1480361604507342778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,8 +2608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
   damageSet: 100
   minDamage: 1
   maxDamage: 15
   randomDamage: 0
   setDamage: 1
+  AnkleBiter: 0
+  NightMare: 0

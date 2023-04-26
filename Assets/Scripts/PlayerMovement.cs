@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Portal;
     public int spawnPortal = 3;
     public int totalPointsNeeded;
+    public bool isBear;
+    public bool isNightMare;
+    public bool isAnkleBiter;
 
     Vector3 velocity;
     bool isGrounded;    // bool set default to false
@@ -33,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
      void Start()
     {
-        
+        Portal.SetActive(false);
         animator = GetComponent<Animator>();
         HandArrow.gameObject.SetActive(false);
     }
@@ -94,15 +97,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("shoot", false);
         }
+        SpawnPortal();
     }
 
-    public void SpawnPortal(int i)
+    public void SpawnPortal()
     {
-        totalPointsNeeded += 1;
-
-        if (totalPointsNeeded >= spawnPortal)
-        {
-            
-        }
+        Portal.SetActive(true);
     }
 }

@@ -8,6 +8,7 @@ public class Nightmare : MonoBehaviour
     [Header("Health")]
     public int maxHealth = 100;   
     public Animator animator;
+    public PlayerMovement player;
 
     public NavMeshAgent agent;
     WavePoints WP;
@@ -15,6 +16,7 @@ public class Nightmare : MonoBehaviour
     public virtual void Start()
     {
         WP = GameObject.FindGameObjectWithTag("WavePoints").GetComponent<WavePoints>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
         agent = this.gameObject.GetComponent<NavMeshAgent>();
         animator = this.gameObject.GetComponent<Animator>();
