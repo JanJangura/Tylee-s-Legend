@@ -6,6 +6,11 @@ public class Arrow : MonoBehaviour
     public Vector3 m_target;
     public float Speed;
 
+    private void Start()
+    {
+        this.gameObject.tag = "Arrow";
+    }
+
     void Update()
     {
         float step = Speed * Time.deltaTime;

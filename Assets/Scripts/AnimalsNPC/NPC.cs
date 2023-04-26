@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator animator;
-    WavePoints WP;
+    WavePoints WP;   
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,6 @@ public class NPC : MonoBehaviour
     {       
         int rand = Random.Range(0, WP.wavePoints.Length);
         agent.SetDestination(WP.wavePoints[rand].position);
-        Debug.Log(rand);
     }
 
     IEnumerator waiter()

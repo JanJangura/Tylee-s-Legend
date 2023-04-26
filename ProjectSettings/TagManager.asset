@@ -12,6 +12,7 @@ TagManager:
   - Nightmare
   - Alien
   - WayPoint
+  - Arrow
   layers:
   - Default
   - TransparentFX

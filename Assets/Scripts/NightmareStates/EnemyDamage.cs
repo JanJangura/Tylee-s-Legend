@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public GameObject player;
+    PlayerHealth player;
     private float damageRange;
     public float damageSet = 25f;
     public float minDamage;
@@ -20,6 +21,8 @@ public class EnemyDamage : MonoBehaviour
     void Start()
     {
         damageRange = Random.Range(minDamage, maxDamage);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
        // source = player.GetComponent<AudioSource>();
     }
 
@@ -27,14 +30,14 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && randomDamage)
         {
-            player.GetComponent<PlayerHealth>().health -= damageRange;
+            player.health -= damageRange;
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }
 
         if (other.gameObject.tag == "Player" && setDamage)
         {
-            player.GetComponent<PlayerHealth>().health -= damageSet;
+            player.health -= damageSet;
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }

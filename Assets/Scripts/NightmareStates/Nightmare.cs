@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Nightmare : MonoBehaviour
 {
-    public int HP = 100;
+    [Header("Health")]
+    public int maxHealth = 100;   
     public Animator animator;
 
     public void TakeDamage(int damageAmount)
     {
-        HP -= damageAmount;
-        if(HP<= 0)
+        maxHealth -= damageAmount;
+
+        if(maxHealth <= 0)
         {
-            animator.SetTrigger("die");
+            animationPlayDeath();
             GetComponent<Collider>().enabled = false;
-            
+            Debug.Log("Dead");
         }
         else
-        {
-            animator.SetTrigger("damage");
-
+        {            
+            animationDamageTaken();
+            Debug.Log("GUN");
+            Debug.Log(maxHealth);
         }
+    }
+
+    public virtual void animationPlayDeath()
+    {
+        animator.SetTrigger("die");
+    }
+
+    public virtual void animationDamageTaken()
+    {
+        animator.SetTrigger("damage");
     }
 }
