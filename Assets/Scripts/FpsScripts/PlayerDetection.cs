@@ -26,11 +26,11 @@ public class PlayerDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.isPaused)
+        if(GameManager.isPaused == false)
         {
             RayCastTool();
-            Prompt();
         }
+        Prompt();
     }
 
     void RayCastTool()

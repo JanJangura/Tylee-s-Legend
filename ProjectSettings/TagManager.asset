@@ -14,6 +14,7 @@ TagManager:
   - WayPoint
   - Arrow
   - ObjectInteraction
+  - HealthBar
   layers:
   - Default
   - TransparentFX

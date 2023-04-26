@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5920868347074871540}
   - component: {fileID: -4702725430845062}
   - component: {fileID: -2988193342056222684}
+  - component: {fileID: 5495113811150059375}
   m_Layer: 0
   m_Name: Rib
   m_TagString: ObjectInteraction
@@ -114,3 +115,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6108283, y: 0.37786, z: 0.12128869}
   m_Center: {x: -0.024913102, y: 0.026179887, z: 0.024080047}
+--- !u!114 &5495113811150059375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272547568401719585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70694b5853fb6743ae073bfa282a407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 400

@@ -10,6 +10,9 @@ public class Bear : Nightmare
     public GameObject meat;
     public int damage = 1;
     bool isRunning;
+    bool isDeath;
+    public float deathTimer = 5f;
+    public float stopRunning = 7f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,12 @@ public class Bear : Nightmare
                 animator.SetBool("IsRunning", true);
                 agent.speed = 12;
             }
+            else if (isDeath)
+            {
+                animator.SetBool("IsRunning", false);
+                animator.SetBool("IsWalking", false);
+                animator.SetBool("IsDead", true);
+            }
             else
             {
                 animator.SetBool("IsRunning", false);
@@ -53,23 +62,19 @@ public class Bear : Nightmare
 
     /// ////////////////////////////////////////////
 
-    IEnumerator waiter()
-    {
-        yield return new WaitForSeconds(3);
-    }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Arrow")
         {
-            isRunning = true;
+            GoRun();
             base.TakeDamage(damage);
         }
     }
 
     void GoRun()
     {
-        Invoke("StopRunning", 10);
+        isRunning = true;
+        Invoke("StopRunning", stopRunning);
     }
 
     void StopRunning()
@@ -79,9 +84,17 @@ public class Bear : Nightmare
 
     public override void animationPlayDeath()
     {
+        isDeath = true;
+        isRunning = false;
+        agent.speed = 0;
+        Invoke("Destruction", deathTimer);
+        Debug.Log("DEATH");
+    }
+
+    public void Destruction()
+    {
         Destroy(this.gameObject);
         Instantiate(meat, this.transform.position, Quaternion.identity);
-        Debug.Log("DEATH");
     }
 
     public override void animationDamageTaken()

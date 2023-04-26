@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject[] UIObjects;
 
     AudioSource[] audios;
 
@@ -32,33 +33,47 @@ public class GameManager : MonoBehaviour
                 PauseGame();
             }
         }
+        else
+        {
+            isPaused = false;
+        }
     }
 
     public void PauseGame()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        isPaused = true;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
 
         foreach (AudioSource a in audios)
         {
             a.Pause();
         }
+
+        for(int i = 0; i < UIObjects.Length; i++)
+        {
+            UIObjects[i].SetActive(false);
+        }
     }
 
     public void ResumeGame()
     {
+        isPaused = false;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
 
         foreach (AudioSource a in audios)
         {
             a.Play();
+        }
+
+        for (int i = 0; i < UIObjects.Length; i++)
+        {
+            UIObjects[i].SetActive(true);
         }
     }
 

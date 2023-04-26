@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -8,12 +9,13 @@ public class Arrow : MonoBehaviour
 
     private void Start()
     {
-        this.gameObject.tag = "Arrow";
+        this.gameObject.tag = "Arrow";        
     }
 
     void Update()
     {
         float step = Speed * Time.deltaTime;
+
         if (m_target != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, m_target, step);
@@ -23,5 +25,22 @@ public class Arrow : MonoBehaviour
     public void setTarget(Vector3 target)
     {
         m_target = target;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other != null)
+        {
+            if (other.gameObject.tag == "AI" || other.gameObject.tag == "Nightmare")
+            {
+                Invoke("Destruction", .8f);
+            }
+        }   
+    }
+
+    void Destruction()
+    {
+        GetComponent<Collider>().enabled = false;
+        Destroy(this.gameObject);
     }
 }
