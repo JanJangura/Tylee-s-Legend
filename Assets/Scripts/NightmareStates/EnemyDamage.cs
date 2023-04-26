@@ -39,6 +39,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.gameObject.tag == "Player" && setDamage)
         {
             player.damageTaken((int)damageSet);
+            Debug.Log(damageSet);
           //  source.clip = sounds[Random.Range(0, sounds.Length)];
            // source.Play();
         }

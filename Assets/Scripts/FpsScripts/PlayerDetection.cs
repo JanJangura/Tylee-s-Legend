@@ -72,7 +72,7 @@ public class PlayerDetection : MonoBehaviour
     void PickUpItem(RaycastHit hitInfo)
     {
         Destroy(hitInfo.transform.gameObject);
-        playerHealth.health += heal;
+        playerHealth.HealSelf((int)heal);
         DisplayMessageOff();
     }
 

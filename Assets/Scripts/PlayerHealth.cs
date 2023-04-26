@@ -38,4 +38,11 @@ public class PlayerHealth : MonoBehaviour
         int currentHealth = (int)health;
         healthBar.SetHealth(currentHealth);
     }
+
+    public void HealSelf(int i)
+    {
+        health += i;
+        int currentHealth = (int)health;
+        healthBar.SetHealth(currentHealth);
+    }
 }

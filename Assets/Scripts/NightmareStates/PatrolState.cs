@@ -5,36 +5,47 @@ using UnityEngine.AI;
 
 public class PatrolState : StateMachineBehaviour
 {
+
     float timer;
-    List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
-   
+    WavePoints WP;
+    int rand;
+
+
     Transform player;
     float chaseRange = 20;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        WP = GameObject.FindGameObjectWithTag("WavePoints").GetComponent<WavePoints>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
-        agent.speed = 1.5f;
+        agent.speed = 5;
         timer = 0;
-       GameObject go = GameObject.FindGameObjectWithTag("WayPoints");
-        foreach(Transform t in go.transform)
-            wayPoints.Add(t);
 
-
-        agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
+        for (int i = 0; i < 1; i++)
+        {
+            rand = Random.Range(0, WP.wavePoints.Length);
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       if(agent.remainingDistance <= agent.stoppingDistance)
-            agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
 
+        if (agent.remainingDistance < agent.stoppingDistance)
+        {
+            agent.SetDestination(WP.wavePoints[rand].position);
+        }
+        Debug.Log(agent.SetDestination(WP.wavePoints[rand].position));
+            
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (agent.remainingDistance < 1 && agent.remainingDistance > 0)
+        {
             animator.SetBool("isPatrolling", false);
+            agent.speed = 0;
+        }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
         if (distance < chaseRange)
