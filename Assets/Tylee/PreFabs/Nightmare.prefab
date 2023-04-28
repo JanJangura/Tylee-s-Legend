@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1941700195326635422}
-  - component: {fileID: 1941700195326635420}
   - component: {fileID: 1941700195326635421}
+  - component: {fileID: 7274646508071498643}
   m_Layer: 0
   m_Name: HitColllider
   m_TagString: Untagged
@@ -33,19 +33,6 @@ Transform:
   m_Father: {fileID: 1941700195623971772}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1941700195326635420
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941700195326635423}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 273.45816, y: 58.71359, z: 118.76174}
-  m_Center: {x: -21.626362, y: -5.759566, z: -42.28294}
 --- !u!114 &1941700195326635421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +54,19 @@ MonoBehaviour:
   setDamage: 1
   AnkleBiter: 0
   NightMare: 0
+--- !u!65 &7274646508071498643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941700195326635423}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 157.38103, y: 21.94336, z: 115.88315}
+  m_Center: {x: -50.67422, y: -8.971433, z: -0.8977651}
 --- !u!1 &1941700195624159244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,7 +2539,7 @@ GameObject:
   - component: {fileID: 1941700195314800456}
   - component: {fileID: 1941700195314800457}
   - component: {fileID: 1021688536549524035}
-  - component: {fileID: -3709915348692401097}
+  - component: {fileID: -8404740516244278651}
   m_Layer: 0
   m_Name: Nightmare
   m_TagString: Nightmare
@@ -2592,7 +2592,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941700195624418606}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.6039925, y: 4.1671343, z: 8.283247}
@@ -2631,29 +2631,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfaa3283ddf08fd4ebb07906b9979597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 10
   animator: {fileID: 1941700195631747714}
   player: {fileID: 0}
   agent: {fileID: 1941700195314800457}
   WP: {fileID: 0}
---- !u!114 &-3709915348692401097
-MonoBehaviour:
+--- !u!54 &-8404740516244278651
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941700195624418606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerMovement: {fileID: 0}
-  damageSet: 25
-  minDamage: 0
-  maxDamage: 0
-  randomDamage: 0
-  setDamage: 0
-  AnkleBiter: 0
-  NightMare: 0
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 3
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -15,6 +15,7 @@ TagManager:
   - Arrow
   - ObjectInteraction
   - HealthBar
+  - PlayerHitBox
   layers:
   - Default
   - TransparentFX

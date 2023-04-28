@@ -29,13 +29,13 @@ public class Arrow : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other != null)
+        if (other.gameObject != null)
         {
             if (other.gameObject.tag == "AI" || other.gameObject.tag == "Nightmare")
             {
                 Invoke("Destruction", .8f);
             }
-        }   
+        }
     }
 
     void Destruction()

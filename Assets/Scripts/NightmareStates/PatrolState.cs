@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PatrolState : StateMachineBehaviour
-{
-
-    float timer;
+{   
     NavMeshAgent agent;
     WavePoints WP;
     int rand;
@@ -23,7 +21,6 @@ public class PatrolState : StateMachineBehaviour
 
         agent = animator.GetComponent<NavMeshAgent>();
         agent.speed = 5;
-        timer = 0;
 
         rand = Random.Range(0, WP.wavePoints.Length);
     }

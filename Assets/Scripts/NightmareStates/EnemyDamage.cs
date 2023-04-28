@@ -29,23 +29,26 @@ public class EnemyDamage : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        int ranDmg = (int)Random.Range(minDamage, maxDamage);
-
-        if (other.gameObject.tag == "Player" && randomDamage)
+        if (other != null)
         {
-            player.damageTaken(ranDmg);
-            checkBool();
-          //  source.clip = sounds[Random.Range(0, sounds.Length)];
-          // source.Play();
-        }
+            int ranDmg = (int)Random.Range(minDamage, maxDamage);
 
-        if (other.gameObject.tag == "Player" && setDamage)
-        {
-            player.damageTaken((int)damageSet);
-            checkBool();
-            Debug.Log(damageSet);
-          //  source.clip = sounds[Random.Range(0, sounds.Length)];
-           // source.Play();
+            if (other.gameObject.tag == "PlayerHitBox" && randomDamage)
+            {
+                player.damageTaken(ranDmg);
+                checkBool();
+                //  source.clip = sounds[Random.Range(0, sounds.Length)];
+                // source.Play();
+            }
+
+            if (other.gameObject.tag == "PlayerHitBox" && setDamage)
+            {
+                player.damageTaken((int)damageSet);
+                checkBool();
+                Debug.Log(damageSet);
+                //  source.clip = sounds[Random.Range(0, sounds.Length)];
+                // source.Play();
+            }
         }
     }
 
