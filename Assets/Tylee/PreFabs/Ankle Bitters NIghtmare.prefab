@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496825095884160005}
-  - component: {fileID: 1496825095884160011}
   - component: {fileID: 1496825095884160004}
   m_Layer: 0
   m_Name: HitColllider
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 1496825096106898014}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1496825095884160011
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496825095884160006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 353.63498, y: 49.88973, z: 110.09079}
-  m_Center: {x: -123.02035, y: -8.834917, z: 5.264572}
 --- !u!114 &1496825095884160004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 100
   minDamage: 1
@@ -211,7 +198,8 @@ GameObject:
   - component: {fileID: 1496825096071321367}
   - component: {fileID: 1496825096071321361}
   - component: {fileID: -8787713917193231001}
-  - component: {fileID: -8335536441651313849}
+  - component: {fileID: 8480489093263393889}
+  - component: {fileID: -8988141562059074518}
   m_Layer: 0
   m_Name: Ankle Bitters NIghtmare
   m_TagString: Nightmare
@@ -307,7 +295,8 @@ MonoBehaviour:
   animator: {fileID: 1496825096113851232}
   player: {fileID: 0}
   agent: {fileID: 1496825096071321361}
---- !u!114 &-8335536441651313849
+  WP: {fileID: 0}
+--- !u!114 &8480489093263393889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,17 +305,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1496825096106517708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7cedc10836f564f98ec88809c64747, type: 3}
+  m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 25
   minDamage: 0
   maxDamage: 0
   randomDamage: 0
   setDamage: 0
-  AnkleBiter: 1
+  AnkleBiter: 0
   NightMare: 0
+--- !u!54 &-8988141562059074518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496825096106517708}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 3
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1496825096106523242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,7 +2671,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4454971280819527109}
-  - component: {fileID: 7968285439210518987}
   - component: {fileID: 368824719201390579}
   m_Layer: 0
   m_Name: HitColllider
@@ -2689,19 +2694,6 @@ Transform:
   m_Father: {fileID: 1496825096106855832}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -5.042, y: -20.806, z: -163.58}
---- !u!65 &7968285439210518987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203809964619704514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 309.86896, y: 49.88973, z: 114.778305}
-  m_Center: {x: -47.0581, y: -33.339417, z: -551.7366}
 --- !u!114 &368824719201390579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2714,6 +2706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 100
   minDamage: 1
@@ -2767,6 +2760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 50
   minDamage: 1

@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 100
   minDamage: 1
@@ -526,7 +527,7 @@ GameObject:
   - component: {fileID: 2273803482594781773}
   - component: {fileID: 2273803482594781774}
   - component: {fileID: -1756646158196572472}
-  - component: {fileID: 4036977675169156910}
+  - component: {fileID: -3041677455016566523}
   m_Layer: 0
   m_Name: Big NightMare
   m_TagString: Nightmare
@@ -622,7 +623,8 @@ MonoBehaviour:
   animator: {fileID: 2273803482685598300}
   player: {fileID: 0}
   agent: {fileID: 2273803482594781774}
---- !u!114 &4036977675169156910
+  WP: {fileID: 0}
+--- !u!114 &-3041677455016566523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,9 +633,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2273803482678248944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b7cedc10836f564f98ec88809c64747, type: 3}
+  m_Script: {fileID: 11500000, guid: 81c0b6a7be4df91458513d85a75c2a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerMovement: {fileID: 0}
   damageSet: 25
   minDamage: 0
@@ -641,7 +644,7 @@ MonoBehaviour:
   randomDamage: 0
   setDamage: 0
   AnkleBiter: 0
-  NightMare: 1
+  NightMare: 0
 --- !u!1 &2273803482678254422
 GameObject:
   m_ObjectHideFlags: 0

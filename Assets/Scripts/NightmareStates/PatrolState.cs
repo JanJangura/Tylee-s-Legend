@@ -20,30 +20,23 @@ public class PatrolState : StateMachineBehaviour
     {
         WP = GameObject.FindGameObjectWithTag("WavePoints").GetComponent<WavePoints>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
         agent = animator.GetComponent<NavMeshAgent>();
         agent.speed = 5;
         timer = 0;
 
-        for (int i = 0; i < 1; i++)
-        {
-            rand = Random.Range(0, WP.wavePoints.Length);
-        }
+        rand = Random.Range(0, WP.wavePoints.Length);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        agent.SetDestination(WP.wavePoints[rand].position);
 
-        if (agent.remainingDistance < agent.stoppingDistance)
+        if(agent.remainingDistance > 0 && agent.remainingDistance < 1)
         {
-            agent.SetDestination(WP.wavePoints[rand].position);
-        }
-            
-        timer += Time.deltaTime;
-        if (agent.remainingDistance < 1 && agent.remainingDistance > 0)
-        {
-            animator.SetBool("isPatrolling", false);
             agent.speed = 0;
+            animator.SetBool("isPatrolling", false);
         }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);

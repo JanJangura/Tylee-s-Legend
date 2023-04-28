@@ -21,7 +21,7 @@ public class EnemyDamage : MonoBehaviour
 
 
     void Start()
-    {       
+    {        
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         // source = player.GetComponent<AudioSource>();
@@ -51,7 +51,14 @@ public class EnemyDamage : MonoBehaviour
 
     public virtual void checkBool()
     {
-        
+        if (AnkleBiter)
+        {
+            playerMovement.isAnkleBiter = true;
+        }
+        else if (NightMare)
+        {
+            playerMovement.isNightMare = true;
+        }
     }
 
     void Update()

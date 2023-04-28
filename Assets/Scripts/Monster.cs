@@ -5,23 +5,12 @@ using UnityEngine.AI;
 
 public class Monster : Nightmare
 {
-    public override void AImovement()
-    {
-        
-    }
-    public override void MoveAI()
-    {
-        
-    }
-
-    public override void Update()
-    {
-
-    }
-
     public override void Start()
     {
-        agent = this.gameObject.GetComponent<NavMeshAgent>();
-        animator = this.gameObject.GetComponent<Animator>();
+            WP = GameObject.FindGameObjectWithTag("WavePoints").GetComponent<WavePoints>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+            agent = this.gameObject.GetComponent<NavMeshAgent>();
+            animator = this.gameObject.GetComponent<Animator>();
     }
 }

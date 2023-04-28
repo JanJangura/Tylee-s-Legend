@@ -11,7 +11,7 @@ public class Nightmare : MonoBehaviour
     public PlayerMovement player;
 
     public NavMeshAgent agent;
-    WavePoints WP;
+    public WavePoints WP;
 
     public virtual void Start()
     {
