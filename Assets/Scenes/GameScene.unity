@@ -8892,6 +8892,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5861040936559329907, guid: 9af1c27918d0ef44c97c9ea652f213c6, type: 3}
+      propertyPath: mouseSensitivity
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5861040936559329918, guid: 9af1c27918d0ef44c97c9ea652f213c6, type: 3}
       propertyPath: PickUpUIText
       value: 
