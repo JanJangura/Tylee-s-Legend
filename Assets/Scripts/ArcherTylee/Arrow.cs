@@ -19,6 +19,7 @@ public class Arrow : MonoBehaviour
         if (m_target != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, m_target, step);
+            Invoke("Destruction", .8f);
         }
     }
 
@@ -31,14 +32,18 @@ public class Arrow : MonoBehaviour
     {
         if (other.gameObject != null)
         {
-            if (other.gameObject.tag == "AI" || other.gameObject.tag == "Nightmare")
+            if (other.gameObject.tag == "PlayerHitBox")
             {
-                Invoke("Destruction", .8f);
+                Physics.IgnoreLayerCollision(7, 8);
+            }
+            else
+            {
+                Invoke("Destruction", .08f);
             }
         }
     }
 
-    void Destruction()
+        void Destruction()
     {
         GetComponent<Collider>().enabled = false;
         Destroy(this.gameObject);

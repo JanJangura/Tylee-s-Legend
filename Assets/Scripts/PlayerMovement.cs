@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;    // Want to control what this object checks for
+    public TextMeshProUGUI portalNote;
 
     [Header("SpawnPortal")]
     public GameObject Portal;
@@ -35,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
      void Start()
     {
-        Portal.SetActive(false);
         animator = GetComponent<Animator>();
         HandArrow.gameObject.SetActive(false);
     }
@@ -101,6 +102,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void SpawnPortal()
     {
-        Portal.SetActive(true);
+        if(portalNote != null)
+        {
+            if (isBear && isNightMare && isAnkleBiter)
+            {
+                Portal.SetActive(true);
+                portalNote.text = "FIND THE PORAL!";
+            }
+            else
+            {
+                portalNote.text = "";
+            }
+        }        
     }
 }

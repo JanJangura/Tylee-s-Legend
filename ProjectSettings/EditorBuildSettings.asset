@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1c8d7509a82b29e4aa8af4e198608b9d
   - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
     path: Assets/Scenes/Portal.unity
     guid: dec9113283f55c84ea9a9786ce9c097a
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Winner.unity
+    guid: 90e53069242926148837ae66048cc08c
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 862ba234926e1ee438047f03bd3b1394
   m_configObjects: {}

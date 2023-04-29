@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("DeathScene");
         }
 
         if (health > 100)

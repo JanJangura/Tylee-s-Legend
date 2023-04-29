@@ -1901,6 +1901,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   animator: {fileID: 4045984677050727446}
+  player: {fileID: 0}
+  agent: {fileID: 0}
+  WP: {fileID: 0}
+  enemyHitBox: {fileID: 0}
   meat: {fileID: 5272547568401719585, guid: e5064c0e46803b64a829ac04aff3f0c0, type: 3}
   damage: 1
   deathTimer: 5
@@ -1928,7 +1932,7 @@ Rigidbody:
   m_GameObject: {fileID: 7317722503424883926}
   serializedVersion: 2
   m_Mass: 50
-  m_Drag: 3
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1

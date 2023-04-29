@@ -12,9 +12,7 @@ public class EnemyDamage : MonoBehaviour
     public float maxDamage;
 
     public bool randomDamage;
-    public bool setDamage;
-    public bool AnkleBiter;
-    public bool NightMare;
+    public bool setDamage;    
 
    // public AudioClip[] sounds;
     //private AudioSource source;
@@ -36,7 +34,6 @@ public class EnemyDamage : MonoBehaviour
             if (other.gameObject.tag == "PlayerHitBox" && randomDamage)
             {
                 player.damageTaken(ranDmg);
-                checkBool();
                 //  source.clip = sounds[Random.Range(0, sounds.Length)];
                 // source.Play();
             }
@@ -44,29 +41,14 @@ public class EnemyDamage : MonoBehaviour
             if (other.gameObject.tag == "PlayerHitBox" && setDamage)
             {
                 player.damageTaken((int)damageSet);
-                checkBool();
-                Debug.Log(damageSet);
                 //  source.clip = sounds[Random.Range(0, sounds.Length)];
                 // source.Play();
             }
         }
-    }
-
-    public virtual void checkBool()
-    {
-        if (AnkleBiter)
-        {
-            playerMovement.isAnkleBiter = true;
-        }
-        else if (NightMare)
-        {
-            playerMovement.isNightMare = true;
-        }
-    }
+    }  
 
     void Update()
     {
-
     }
 }
 

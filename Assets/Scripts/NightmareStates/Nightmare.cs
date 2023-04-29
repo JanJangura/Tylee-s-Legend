@@ -12,6 +12,11 @@ public class Nightmare : MonoBehaviour
 
     public NavMeshAgent agent;
     public WavePoints WP;
+    public GameObject enemyHitBox;
+
+    public bool AnkleBiter;
+    public bool NightMare;
+    public bool isDead;
 
     public virtual void Start()
     {
@@ -35,12 +40,29 @@ public class Nightmare : MonoBehaviour
 
         if(maxHealth <= 0)
         {
+            isDead = true;
             animationPlayDeath();
             GetComponent<Collider>().enabled = false;
+            Destroy(enemyHitBox);
+            checkBool();
         }
         else
         {            
             animationDamageTaken();
+        }
+    }
+
+    public virtual void checkBool()
+    {
+        if (AnkleBiter && isDead)
+        {
+            player.isAnkleBiter = true;
+            Debug.Log(AnkleBiter);
+        }
+        else if (NightMare && isDead)
+        {
+            player.isNightMare = true;
+            Debug.Log(NightMare);
         }
     }
 

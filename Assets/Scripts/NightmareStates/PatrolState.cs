@@ -8,16 +8,17 @@ public class PatrolState : StateMachineBehaviour
     NavMeshAgent agent;
     WavePoints WP;
     int rand;
-
+    BigNightMare BNM;
 
     Transform player;
-    float chaseRange = 20;
+    float chaseRange = 25;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         WP = GameObject.FindGameObjectWithTag("WavePoints").GetComponent<WavePoints>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log(player);
 
         agent = animator.GetComponent<NavMeshAgent>();
         agent.speed = 5;

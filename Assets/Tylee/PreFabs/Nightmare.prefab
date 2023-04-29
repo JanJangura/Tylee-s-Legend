@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7274646508071498643}
   m_Layer: 0
   m_Name: HitColllider
-  m_TagString: Untagged
+  m_TagString: EnemyHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,8 +52,6 @@ MonoBehaviour:
   maxDamage: 15
   randomDamage: 0
   setDamage: 1
-  AnkleBiter: 0
-  NightMare: 0
 --- !u!65 &7274646508071498643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2636,6 +2634,10 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 1941700195314800457}
   WP: {fileID: 0}
+  enemyHitBox: {fileID: 1941700195326635423}
+  AnkleBiter: 0
+  NightMare: 1
+  isDead: 0
 --- !u!54 &-8404740516244278651
 Rigidbody:
   m_ObjectHideFlags: 0

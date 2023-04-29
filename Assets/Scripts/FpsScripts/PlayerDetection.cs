@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
@@ -40,27 +39,24 @@ public class PlayerDetection : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * rayCastRange, Color.red);
 
         if (Physics.Raycast(ray, out RaycastHit hitInfo, rayCastRange, layermask)) // This gives a raycast to the game object position.
-        {
-            if(hitInfo.collider != null)
+        {         
+            switch (hitInfo.collider.tag)
             {
-                switch (hitInfo.collider.tag)
-                {
-                    case "ObjectInteraction":
-                        DisplayMessage();
-                        if (Input.GetKeyDown(KeyCode.E))
-                        {
-                            PickUpItem(hitInfo);
-                        }
-                        return;
+                case "ObjectInteraction":
+                    DisplayMessage();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        PickUpItem(hitInfo);
+                    }
+                    return;
 
-                    case null:
-                        DisplayMessageOff();
-                        return;
+                case null:
+                    DisplayMessageOff();
+                    return;
 
-                    default:
-                        DisplayMessageOff();
-                        return;
-                }
+                default:
+                    DisplayMessageOff();
+                    return;
             }
         }
         else

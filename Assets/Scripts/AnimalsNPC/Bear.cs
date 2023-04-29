@@ -41,6 +41,7 @@ public class Bear : Nightmare
     public override void animationPlayDeath()
     {
         isDeath = true;
+        player.isBear = true;
         isRunning = false;
         agent.speed = 0;
         Invoke("Destruction", deathTimer);

@@ -16,6 +16,8 @@ TagManager:
   - ObjectInteraction
   - HealthBar
   - PlayerHitBox
+  - EnemyHit
+  - BigNightMare
   layers:
   - Default
   - TransparentFX
@@ -24,8 +26,8 @@ TagManager:
   - Water
   - UI
   - PostProcessing
-  - 
-  - 
+  - PlayerHitBox
+  - ArrowHitBox
   - 
   - 
   - 

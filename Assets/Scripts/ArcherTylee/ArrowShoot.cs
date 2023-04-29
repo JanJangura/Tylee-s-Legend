@@ -6,6 +6,7 @@ public class ArrowShoot : MonoBehaviour
 {
     public GameObject ArrowPrefab;
     RaycastHit hit;
+    public LayerMask layerMask;
     float range = 1000f;
     public Transform ArrowSpawnPosition;
      
@@ -21,8 +22,9 @@ public class ArrowShoot : MonoBehaviour
 
         Vector2 ScreenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(ScreenCenter);
-        if (Physics.Raycast(ray, out hit, range))
-        {
+        if (Physics.Raycast(ray, out hit, range, layerMask))
+        {           
+
             GameObject ArrowInstantiate = GameObject.Instantiate(ArrowPrefab, ArrowSpawnPosition.transform.position, ArrowSpawnPosition.transform.rotation) as GameObject;
             ArrowInstantiate.GetComponent<Arrow>().setTarget(hit.point);
 
