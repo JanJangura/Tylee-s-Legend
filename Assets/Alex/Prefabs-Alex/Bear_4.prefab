@@ -1899,12 +1899,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26df4d10d29f7814384be8235d35c97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 100
   animator: {fileID: 4045984677050727446}
   player: {fileID: 0}
   agent: {fileID: 0}
   WP: {fileID: 0}
   enemyHitBox: {fileID: 0}
+  AnkleBiter: 0
+  NightMare: 0
+  isDead: 0
   meat: {fileID: 5272547568401719585, guid: e5064c0e46803b64a829ac04aff3f0c0, type: 3}
   damage: 1
   deathTimer: 5

@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4630841281808820489, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_UseGravity
@@ -1199,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4630841281808820489, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_UseGravity
@@ -1650,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4630841281808820489, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_UseGravity
@@ -1815,6 +1815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195623990344, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1903,6 +1907,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195623990344, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4206,7 +4214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4630841281808820489, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_UseGravity
@@ -4372,6 +4380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195326635421, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: NightMare
       value: 1
@@ -5211,8 +5223,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.8773553, z: 1}
-  m_Center: {x: 0, y: 1.7735395, z: 0}
+  m_Size: {x: 1, y: 2.02378, z: 1}
+  m_Center: {x: 0, y: 1.7003286, z: 0}
 --- !u!1 &1393768840
 GameObject:
   m_ObjectHideFlags: 0
@@ -6095,6 +6107,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195623990344, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -6890,7 +6906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4630841281808820489, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_UseGravity
@@ -7091,6 +7107,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195623990344, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -8161,6 +8181,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1021688536549524035, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1941700195623990344, guid: becd379c33170ea4c969f32667b24c7b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -8729,7 +8753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680029537114585726, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2706145247552927507, guid: 49c93132fb0588e43ad9a094bf45c56f, type: 3}
       propertyPath: m_LocalPosition.x
